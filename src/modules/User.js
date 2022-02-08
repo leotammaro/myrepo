@@ -57,6 +57,7 @@ function User({ name }) {
         h={300}
         w={300}
         paddingBottom={10}
+        marginRight={{ base: "16px", md: "0" }}
       />
 
       <Box display={{ base: "none", xl: "block" }} w={780} h={580}>

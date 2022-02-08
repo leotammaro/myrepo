@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useRef } from "react";
-import { ChakraProvider, Flex } from "@chakra-ui/react";
+import { ChakraProvider, Flex, Text } from "@chakra-ui/react";
 import theme from "./services/theme";
 import Navbar from "./modules/Navbar";
 import AboutUser from "./modules/AboutUser";
@@ -40,6 +40,16 @@ function App() {
             scrollToProyects={scrollToProyects}
           />
           <User />
+          <Flex
+            justifyContent={"space-around"}
+            fontSize={18}
+            color={"primary"}
+            textDecoration={"underline"}
+          >
+            <Text onClick={() => scrollToAbout()}>Sobre mi </Text>
+            <Text>Proyectos</Text>
+            <Text>Contactame</Text>
+          </Flex>
         </Flex>
         <AboutUser ref={aboutRef} />
         <ProjectsSection ref={proyectsRef} />

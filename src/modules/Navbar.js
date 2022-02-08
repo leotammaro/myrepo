@@ -1,6 +1,6 @@
-import { Flex, Stack, Text } from "@chakra-ui/react";
+import { Flex, Image, Stack, Text } from "@chakra-ui/react";
 import React from "react";
-import DrawerNavbar from "./DrawerNavbar";
+import moon from "../svg/moon.svg";
 import LinkNavbar from "./LinkNavbar";
 
 function Navbar({ scrollToAbout, scrollToProyects }) {
@@ -16,7 +16,6 @@ function Navbar({ scrollToAbout, scrollToProyects }) {
 
   return (
     <Flex
-      alignItems={"flex-start"}
       color={"#fff"}
       fontSize={18}
       height={"80px"}
@@ -24,11 +23,13 @@ function Navbar({ scrollToAbout, scrollToProyects }) {
       width={"100%"}
       fontWeight={"600"}
     >
-      <Text color={"#000"}>Leonel Tammaro</Text>
+      <Text color={"#000"} marginRight={"auto"}>
+        Leonel Tammaro
+      </Text>
       <Stack
         spacing={6}
         direction={"row"}
-        display={{ base: "none", sm: "flex" }}
+        display={{ base: "none", md: "flex" }}
       >
         {sections.map((section, index) => (
           <LinkNavbar
@@ -40,7 +41,7 @@ function Navbar({ scrollToAbout, scrollToProyects }) {
           </LinkNavbar>
         ))}
       </Stack>
-      <DrawerNavbar listItems={sections} scrollToSection={scrollToSection} />
+      <Image src={moon} h={8} w={8} marginLeft={5} />
     </Flex>
   );
 }
