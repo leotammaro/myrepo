@@ -1,30 +1,30 @@
-import { Flex, Image, Box, Text, Link, useBreakpointValue } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { Flex, Image, Text, Link, useBreakpointValue } from "@chakra-ui/react";
+import React from "react";
 import { Fade } from "react-reveal";
 
-function ProjectDescription({ proyectImage, description, title, index, repo, urlProyect }) {
+function ProjectDescription({ proyectImage, description, title, urlProyect }) {
   const opacity = useBreakpointValue({ base: "0,5", lg: "1" })
-  console.log(opacity)
 
   return (
-    <Flex
-      direction={
-        "column"}
-      padding={10}
-      fontWeight="600"
-      zIndex={1000}
-    >
-      <Text
-        fontSize={{ base: 18, xl: 24 }}
-        textDecoration="underline"
-        fontWeight={600}
-        color="#fff"
+    <Fade left>
+      <Flex
+        direction={
+          "column"}
+        padding={10}
+        fontWeight="600"
         zIndex={1000}
       >
-        {title}
-      </Text>
-      <Flex alignItems={"center"}>
-        <Fade left>
+        <Text
+          fontSize={{ base: 18, xl: 24 }}
+          textDecoration="underline"
+          fontWeight={600}
+          color="#fff"
+          zIndex={1000}
+        >
+          {title}
+        </Text>
+        <Flex alignItems={"center"}>
+
           <Image
             src={proyectImage}
             w={180}
@@ -32,8 +32,6 @@ function ProjectDescription({ proyectImage, description, title, index, repo, url
             borderRadius={28}
             _hover={{ opacity }}
           />
-        </Fade>
-        <Fade right>
           <Flex
             direction={"column"}
             justifyContent={{ base: "center", xl: "space-between" }}
@@ -43,7 +41,6 @@ function ProjectDescription({ proyectImage, description, title, index, repo, url
             paddingLeft={5}
             display={{ base: "none", lg: "flex" }}
           >
-
             <Text color={"#fff"} fontSize={14} textAlign="left">
               {description}
             </Text>
@@ -67,9 +64,10 @@ function ProjectDescription({ proyectImage, description, title, index, repo, url
               <Link>Repo GitHub</Link>
             </Flex>
           </Flex>
-        </Fade>
+
+        </Flex>
       </Flex>
-    </Flex>
+    </Fade>
   );
 }
 
