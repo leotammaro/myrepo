@@ -1,30 +1,37 @@
 import { Flex, Image } from "@chakra-ui/react";
-import React from "react";
+import React, { forwardRef } from "react";
 import { Link } from "@chakra-ui/react";
 
-function ContactSection() {
+const ContactSection = forwardRef((_, ref) => {
   return (
-    <Flex justifyContent={"center"} padding={5}>
-      <Link href="https://chakra-ui.com" isExternal>
+    <Flex justifyContent={"center"} padding={5} zIndex={2} gap={6} ref={ref}>
+      <Link href="mailto:tammaroleonel@gmail.com" isExternal>
         <Image
           src={"https://cdn-icons-png.flaticon.com/512/5968/5968534.png"}
           h={10}
           w={10}
         />
       </Link>
-
-      <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
-        h={10}
-        w={10}
-      />
-      <Image
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
-        h={10}
-        w={10}
-      />
+      <Link
+        href="https://www.linkedin.com/in/leonel-tammaro-4a730222a/"
+        isExternal
+      >
+        <Image
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+          h={10}
+          w={10}
+        />
+      </Link>
+      <Link>
+        <Image
+          bg={"#fff"}
+          src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+          h={10}
+          w={10}
+        />
+      </Link>
     </Flex>
   );
-}
+});
 
 export default ContactSection;

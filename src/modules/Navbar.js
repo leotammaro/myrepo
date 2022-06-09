@@ -1,35 +1,38 @@
-import { Flex, Image, Stack, Text } from "@chakra-ui/react";
+import { Flex, Image, Stack } from "@chakra-ui/react";
 import React from "react";
-import moon from "../svg/moon.svg";
 import LinkNavbar from "./LinkNavbar";
+import portfolioImage from "../images/portfolioImage.jpg";
 
-function Navbar({ scrollToAbout, scrollToProyects }) {
+function Navbar({ scrollToAbout, scrollToProyects, scrollToContact }) {
   const sections = ["Sobre mi", "Proyectos", "Contactame"];
 
   const scrollToSection = (section) => {
     if (section === "Sobre mi") scrollToAbout();
-    else if (section === "Proyectos") scrollToProyects();
-    else {
+    else if (section === "Proyectos") {
       scrollToProyects();
+    } else {
+      scrollToContact();
     }
   };
 
   return (
     <Flex
-      color={"#fff"}
+      color={"#000"}
       fontSize={18}
       height={"80px"}
       justifyContent={"space-between"}
-      width={"100%"}
+      paddingTop={10}
+      paddingX={{ base: "10px", lg: "0" }}
       fontWeight={"600"}
+      alignItems={"center"}
+      display={{ base: "none", md: "flex" }}
     >
-      <Text color={"#000"} marginRight={"auto"}>
-        Leonel Tammaro
-      </Text>
+      <Image src={portfolioImage} w={20} h={10} />
       <Stack
-        spacing={6}
+        gap={3}
         direction={"row"}
         display={{ base: "none", md: "flex" }}
+        alignItems={"center"}
       >
         {sections.map((section, index) => (
           <LinkNavbar
@@ -41,7 +44,6 @@ function Navbar({ scrollToAbout, scrollToProyects }) {
           </LinkNavbar>
         ))}
       </Stack>
-      <Image src={moon} h={8} w={8} marginLeft={5} />
     </Flex>
   );
 }

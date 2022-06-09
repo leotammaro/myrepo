@@ -1,17 +1,19 @@
 import "./App.css";
-import React, { useRef } from "react";
-import { ChakraProvider, Flex, Text } from "@chakra-ui/react";
+import React, { useRef, useState } from "react";
+import { ChakraProvider, Flex } from "@chakra-ui/react";
 import theme from "./services/theme";
 import Navbar from "./modules/Navbar";
-import AboutUser from "./modules/AboutUser";
+import AboutMe from "./modules/AboutMe";
 import ProjectsSection from "./modules/ProjectsSection";
-import User from "./modules/User";
-import imageBackground from "../src/images/fondo.svg";
+import Home from "./modules/Home";
 import ContactSection from "./modules/ContactSection";
+import "./App.css";
+import ParticlesBackGround from "./modules/Particles";
 
 function App() {
   const aboutRef = useRef(null);
   const proyectsRef = useRef(null);
+  const contactRef = useRef(null);
 
   const scrollToAbout = () => {
     aboutRef.current.scrollIntoView({ behavior: "smooth" });
@@ -21,39 +23,40 @@ function App() {
     proyectsRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const scrollToContact = () => {
+    contactRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <ChakraProvider theme={theme}>
-      <Flex direction={"column"}>
+      <Flex
+        direction={"column"}
+        width={"100%"}
+        height={"100%"}
+        alignItems="center"
+        className="App"
+      >
+        <ParticlesBackGround />
         <Flex
+          w={{ base: "100vw", md: 700, lg: 1000, xl: 1200 }}
           direction={"column"}
-          backgroundImage={imageBackground}
-          backgroundRepeat={"no-repeat"}
-          backgroundPosition={"right"}
-          backgroundSize={"cover"}
-          alignItems={"space-between"}
-          width={"100%"}
-          padding={10}
-          height={"100vh"}
+          h={{ base: "100vh" }}
+          position={"relative"}
         >
           <Navbar
             scrollToAbout={scrollToAbout}
             scrollToProyects={scrollToProyects}
+            scrollToContact={scrollToContact}
           />
-          <User />
-          <Flex
-            justifyContent={"space-around"}
-            fontSize={18}
-            color={"primary"}
-            textDecoration={"underline"}
-          >
-            <Text onClick={() => scrollToAbout()}>Sobre mi </Text>
-            <Text>Proyectos</Text>
-            <Text>Contactame</Text>
-          </Flex>
+          <Home
+            scrollToAbout={scrollToAbout}
+            scrollToContact={scrollToContact}
+            scrollToProyects={scrollToProyects}
+          />
         </Flex>
-        <AboutUser ref={aboutRef} />
+        <AboutMe ref={aboutRef} />
         <ProjectsSection ref={proyectsRef} />
-        <ContactSection />
+        <ContactSection ref={contactRef} />
       </Flex>
     </ChakraProvider>
   );

@@ -10,8 +10,8 @@ function LinkNavbar({ children, delay, onClick }) {
         className="link-navbar"
         _hover={{ outline: "none" }}
         onClick={onClick}
-        color={{ base: "#000", md: "#fff" }}
         display={{ base: "none", md: "block" }}
+        color={{ base: "#000", md: "#fff" }}
       >
         {children}
       </Link>

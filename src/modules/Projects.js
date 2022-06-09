@@ -1,4 +1,4 @@
-import { Box, Stack } from "@chakra-ui/react";
+import { Stack } from "@chakra-ui/react";
 import React from "react";
 import { projects } from "../constants/projects";
 import ProjectDescription from "./ProjectDescription";
@@ -10,7 +10,7 @@ function Projects() {
       alignItems={{ base: "center", xl: "flex-start" }}
     >
       {projects.map((project, index) => {
-        const { proyectImage, repo, title } = project;
+        const { proyectImage, repo, title, description, urlProyect } = project;
         return (
           <ProjectDescription
             index={index}
@@ -18,6 +18,8 @@ function Projects() {
             proyectImage={proyectImage}
             repo={repo}
             title={title}
+            description={description}
+            urlProyect={urlProyect}
           />
         );
       })}

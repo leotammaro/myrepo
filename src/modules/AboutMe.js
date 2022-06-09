@@ -2,35 +2,23 @@ import {
   Box,
   Flex,
   Image,
-  Link,
   Stack,
   StackDivider,
   Text,
 } from "@chakra-ui/react";
 import React, { forwardRef } from "react";
 import { Fade } from "react-reveal";
-import { useEffect, useState } from "react/cjs/react.development";
 import yope from "../images/yope.jpg";
-import { imagesTechnologies } from "../services/technologies";
-import { webSiteTechnologies } from "../services/technologies";
+import { technologies } from "../services/technologies";
 import TextAboutMe from "./TextAboutMe";
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const AboutUser = forwardRef((_, ref) => {
-  const [age, setAge] = useState(23);
-  const calculateAge = () => {
-    const monthBirthday = new Date().getMonth();
-    if (monthBirthday === 4) setAge(age + 1);
-  };
-  useEffect(() => {
-    calculateAge();
-  }, []);
+const AboutMe = forwardRef((_, ref) => {
 
   return (
     <Flex
-      maxH={"100vh"}
-      minH={"100vh"}
       width={"100%"}
-      zIndex={0}
       bgGradient={"linear(135deg,#02aab0 0%,#00cdac 100%)"}
       clipPath={"polygon(0 0, 100% 0, 100% 90%, 0 100%);"}
       justifyContent={"space-around"}
@@ -38,13 +26,14 @@ const AboutUser = forwardRef((_, ref) => {
       alignItems={"center"}
       paddingBottom={100}
       ref={ref}
+      minH={"100vh"}
     >
       <Fade duration={2000}>
         <Text
           fontSize={{ base: 32, md: 32, xl: 44 }}
           fontWeight={600}
           color="white"
-          padding="30px"
+          padding={{ base: "10px", lg: "30px" }}
         >
           Sobre mi
         </Text>
@@ -54,7 +43,7 @@ const AboutUser = forwardRef((_, ref) => {
         padding="30px"
         direction={{ base: "column", md: "row" }}
         spacing={{ base: 10, xl: 20 }}
-        divider={<StackDivider />}
+        divider={<StackDivider marginTop={"0 !important"} />}
         alignItems={"center"}
       >
         <Fade bottom distance={"50px"} duration={1500}>
@@ -64,12 +53,13 @@ const AboutUser = forwardRef((_, ref) => {
             h={{ base: 150, md: 200 }}
             borderRadius={"50%"}
             objectFit={{ base: "cover", xl: "none" }}
+            marginBottom={5}
           />
         </Fade>
         <Fade left distance={"50px"} duration={1500}>
           <Stack w={{ base: 300, xl: 500 }}>
             <TextAboutMe
-              description={`Soy Leo, tengo ${age} años y me encuentro en busca de un cambio en mi carrera profesional.`}
+              description={`Soy Leo, tengo 24 años y me encuentro en busca de un cambio en mi carrera profesional.`}
             />
             <TextAboutMe
               description={
@@ -89,33 +79,28 @@ const AboutUser = forwardRef((_, ref) => {
           </Stack>
         </Fade>
       </Stack>
-      <Fade duration={3000}>
-        <Stack
-          direction={"row"}
-          spacing={7}
-          w="80vw"
-          justifyContent={"center"}
-          zIndex={100000}
+      <Box w={{ base: 300, md: 600, lg: 900 }}>
+        <Carousel
+          autoPlay
+          infiniteLoop
+          showArrows={false}
+          showIndicators={false}
+          showStatus={false}
+          interval={2000}
+          transitionTime={2000}
+          showThumbs={false}
         >
-          {imagesTechnologies.map((technology, index) => {
+          {technologies.map((technologie) => {
             return (
-              <Link
-                href={webSiteTechnologies[technology].url}
-                isExternal
-                key={index}
-              >
-                <Image
-                  src={webSiteTechnologies[technology].logo}
-                  h={{ base: "50px", xl: "80px" }}
-                  w={{ base: "50px", xl: "80px" }}
-                />
-              </Link>
+              <Box>
+                <Image src={technologie.logo} h={65} objectFit={"contain"} />
+              </Box>
             );
           })}
-        </Stack>
-      </Fade>
+        </Carousel>
+      </Box>
     </Flex>
   );
 });
 
-export default AboutUser;
+export default AboutMe;
