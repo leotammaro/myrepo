@@ -74,8 +74,7 @@ function User({ scrollToAbout, scrollToProyects, scrollToContact }) {
       <Flex
         justifyContent={"space-around"}
         fontSize={20}
-        color={"primary"}
-        textDecoration={"underline"}
+        color={"#fff"}
         display={{ base: "flex", md: "none" }}
         gap={8}
         fontWeight={"500"}
