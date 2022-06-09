@@ -5,7 +5,7 @@ import { Fade } from "react-reveal";
 
 const ProjectsSection = forwardRef((_, ref) => {
   return (
-    <Box ref={ref} paddingTop={20}>
+    <Box ref={ref} paddingTop={20} zIndex={1000}>
       <Fade>
         <Text
           fontSize={40}
@@ -14,7 +14,7 @@ const ProjectsSection = forwardRef((_, ref) => {
           textAlign={"center"}
           color="#fff"
         >
-          PROJECTS
+          Proyectos
         </Text>
       </Fade>
       <Projects />

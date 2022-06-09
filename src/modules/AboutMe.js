@@ -27,6 +27,7 @@ const AboutMe = forwardRef((_, ref) => {
       paddingBottom={100}
       ref={ref}
       minH={"100vh"}
+      zIndex={1000}
     >
       <Fade duration={2000}>
         <Text

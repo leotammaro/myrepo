@@ -26,6 +26,7 @@ function Navbar({ scrollToAbout, scrollToProyects, scrollToContact }) {
       fontWeight={"600"}
       alignItems={"center"}
       display={{ base: "none", md: "flex" }}
+      minH="80px"
     >
       <Image src={portfolioImage} w={20} h={10} />
       <Stack

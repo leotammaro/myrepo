@@ -1,4 +1,4 @@
-import { Button, Flex, Image, Link, Stack, Text } from "@chakra-ui/react";
+import { Flex, Image, Link, Stack, Text } from "@chakra-ui/react";
 import React from "react";
 import { Fade } from "react-reveal";
 import "./user.css";
@@ -14,6 +14,7 @@ function User({ scrollToAbout, scrollToProyects, scrollToContact }) {
       className="user-container"
       direction={{ base: "column", xl: "row" }}
       position={"relative"}
+
     >
       <Fade bottom opossite duration={2000}>
         <Stack

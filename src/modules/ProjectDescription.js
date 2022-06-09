@@ -12,7 +12,7 @@ function ProjectDescription({ proyectImage, description, title, index, repo, url
         "column"}
       padding={10}
       fontWeight="600"
-
+      zIndex={1000}
     >
       <Text
         fontSize={{ base: 18, xl: 24 }}

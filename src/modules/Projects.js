@@ -8,6 +8,7 @@ function Projects() {
     <Stack
       justifyContent={"center"}
       alignItems={{ base: "center", xl: "flex-start" }}
+
     >
       {projects.map((project, index) => {
         const { proyectImage, repo, title, description, urlProyect } = project;

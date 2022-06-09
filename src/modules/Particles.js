@@ -1,4 +1,3 @@
-import { position } from "@chakra-ui/react";
 import React from "react";
 import Particles from "react-tsparticles";
 
@@ -7,7 +6,6 @@ function ParticlesBackGround() {
     <Particles
       id="tsparticles"
       options={{
-        style: { position: "absolute" },
         background: {
           color: {
             value: "#000",

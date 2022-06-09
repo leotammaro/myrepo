@@ -36,12 +36,12 @@ function App() {
         alignItems="center"
         className="App"
       >
-        <ParticlesBackGround />
+
         <Flex
           w={{ base: "100vw", md: 700, lg: 1000, xl: 1200 }}
           direction={"column"}
-          h={{ base: "100vh" }}
-          position={"relative"}
+          minH={"100vh"}
+          zIndex={1000}
         >
           <Navbar
             scrollToAbout={scrollToAbout}
@@ -57,8 +57,9 @@ function App() {
         <AboutMe ref={aboutRef} />
         <ProjectsSection ref={proyectsRef} />
         <ContactSection ref={contactRef} />
+        <ParticlesBackGround />
       </Flex>
-    </ChakraProvider>
+    </ChakraProvider >
   );
 }
 
