@@ -36,9 +36,8 @@ function App() {
         alignItems="center"
         className="App"
       >
-
         <Flex
-          w={{ base: "100vw", md: 700, lg: 1000, xl: 1200 }}
+          w={{ base: 350, md: 700, lg: 1000, xl: 1200 }}
           direction={"column"}
           minH={"100vh"}
           zIndex={1000}
