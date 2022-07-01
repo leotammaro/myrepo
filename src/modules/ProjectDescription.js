@@ -23,8 +23,7 @@ function ProjectDescription({ proyectImage, description, title, urlProyect }) {
         >
           {title}
         </Text>
-        <Flex alignItems={"center"}>
-
+        <Flex alignItems={"center"} direction={{ base: "column", lg: "row" }}>
           <Image
             src={proyectImage}
             w={180}
@@ -39,32 +38,25 @@ function ProjectDescription({ proyectImage, description, title, urlProyect }) {
             w={600}
             h="100%"
             paddingLeft={5}
-            display={{ base: "none", lg: "flex" }}
+
           >
-            <Text color={"#fff"} fontSize={14} textAlign="left">
+            <Text color={"#fff"} fontSize={14} textAlign={{ base: "center", lg: "left" }} maxW={{ base: 320, lg: 500 }}>
               {description}
             </Text>
-            <Flex
-              padding={5}
-              gridGap={5}
-              color={"primary"}
-              alignItems="center"
-              fontSize={{ base: 14, xl: 16 }}
+            <Link
+              border={"1px solid #02aab0"}
+              padding={{ base: 1, xl: 2 }}
+              _hover={{ outline: "none" }}
+              href={urlProyect}
+              isExternal
+              _focus={{ boxShadow: "none" }}
+              color="#fff"
+              marginTop={5}
+              display="none"
             >
-              <Link
-                border={"1px solid #02aab0"}
-                padding={{ base: 1, xl: 2 }}
-                _hover={{ outline: "none" }}
-                href={urlProyect}
-                isExternal
-                _focus={{ boxShadow: "none" }}
-              >
-                See Live
-              </Link>
-              <Link>Repo GitHub</Link>
-            </Flex>
+              See Live
+            </Link>
           </Flex>
-
         </Flex>
       </Flex>
     </Fade>

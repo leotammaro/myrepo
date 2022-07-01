@@ -91,9 +91,9 @@ const AboutMe = forwardRef((_, ref) => {
           transitionTime={2000}
           showThumbs={false}
         >
-          {technologies.map((technologie) => {
+          {technologies.map((technologie, index) => {
             return (
-              <Box>
+              <Box key={index}>
                 <Image src={technologie.logo} h={65} objectFit={"contain"} />
               </Box>
             );
