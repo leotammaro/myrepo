@@ -35,7 +35,6 @@ function ProjectDescription({ proyectImage, description, title, urlProyect }) {
             direction={"column"}
             justifyContent={{ base: "center", xl: "space-between" }}
             alignItems={"center"}
-            w={600}
             h="100%"
             paddingLeft={5}
 
