@@ -2,7 +2,8 @@ import { Flex, Image, Text, Link, useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
 import { Fade } from "react-reveal";
 
-function ProjectDescription({ proyectImage, description, title, urlProyect, repo }) {
+function ProjectDescription({ project }) {
+  const { proyectImage, repo, title, description, urlProyect } = project;
   const opacity = useBreakpointValue({ base: "0,5", lg: "1" })
 
   return (
