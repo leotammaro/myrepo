@@ -1,10 +1,9 @@
-import { Flex, Image, Text, Link, useBreakpointValue } from "@chakra-ui/react";
+import { Flex, Image, Text, Link } from "@chakra-ui/react";
 import React from "react";
 import { Fade } from "react-reveal";
 
 function ProjectDescription({ project }) {
   const { proyectImage, repo, title, description, urlProyect } = project;
-  const opacity = useBreakpointValue({ base: "0,5", lg: "1" })
 
   return (
     <Fade left>
@@ -30,7 +29,6 @@ function ProjectDescription({ project }) {
             w={180}
             objectFit="contain"
             borderRadius={28}
-            _hover={{ opacity }}
           />
           <Flex
             direction={"column"}
