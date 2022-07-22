@@ -2,7 +2,7 @@ import { Flex, Image, Text, Link, useBreakpointValue } from "@chakra-ui/react";
 import React from "react";
 import { Fade } from "react-reveal";
 
-function ProjectDescription({ proyectImage, description, title, urlProyect }) {
+function ProjectDescription({ proyectImage, description, title, urlProyect, repo }) {
   const opacity = useBreakpointValue({ base: "0,5", lg: "1" })
 
   return (
@@ -42,19 +42,31 @@ function ProjectDescription({ proyectImage, description, title, urlProyect }) {
             <Text color={"#fff"} fontSize={14} textAlign={{ base: "center", lg: "left" }} maxW={{ base: 320, lg: 500 }}>
               {description}
             </Text>
-            <Link
-              border={"1px solid #02aab0"}
-              padding={{ base: 1, xl: 2 }}
-              _hover={{ outline: "none" }}
-              href={urlProyect}
-              isExternal
-              _focus={{ boxShadow: "none" }}
-              color="#fff"
-              marginTop={5}
-              display="none"
-            >
-              See Live
-            </Link>
+            <Flex gap={3}>
+              <Link
+                border={"1px solid #02aab0"}
+                padding={{ base: 1, xl: 2 }}
+                _hover={{ outline: "none" }}
+                href={urlProyect}
+                isExternal
+                _focus={{ boxShadow: "none" }}
+                color="#fff"
+                marginTop={5}
+              >
+                Ir al proyecto
+              </Link>
+              <Link
+                padding={{ base: 1, xl: 2 }}
+                _hover={{ outline: "none" }}
+                href={repo}
+                isExternal
+                _focus={{ boxShadow: "none" }}
+                color="primary"
+                marginTop={5}
+              >
+                Source code
+              </Link>
+            </Flex>
           </Flex>
         </Flex>
       </Flex>

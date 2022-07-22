@@ -4,11 +4,11 @@ import mobileAnimalFinder from "../images/animalFinderMobile.jpeg"
 export const projects = [
   {
     proyectImage: mobiletodolist,
-    repo: "Repo github",
+    repo: "https://github.com/leotammaro/to-do-list-frontend",
     description:
       'Uno de mis primeros proyectos que realice. "Un to do list", en el cual tenemos 3 columnas que dividen el proceso de nuestras tareas. Las tareas las podemos editar, borrar o bien arrastrar hacia otra columna. Para realizar este proyecto, utilice para el front end React JS y la libreria Chakra UI.Para el back end,utilice Mongo DB, mongoose, Node JS y express. De la misma forma utilice un sistema de autenticación con Firebase para que el usuario pueda logearse desde cualquier dispositivo.  ',
     title: "To Do List",
-    urlProyect: "https://picsum.photos/",
+    urlProyect: "https://to-do-list-frontend-ten.vercel.app/",
   },
   {
     proyectImage: mobileAnimalFinder,
