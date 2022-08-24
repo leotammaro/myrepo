@@ -13,7 +13,7 @@ export const projects = [
     proyectImage: mobiletodolist,
     repo: "https://github.com/leotammaro/to-do-list-frontend",
     description:
-      '"Un to do list",tenemos 3 columnas que dividen el proceso de nuestras tareas. Las tareas las podemos editar, borrar o bien arrastrar hacia otra columna. Utilicé React JS y la libreria Chakra UI para el front-end .En el back end,utilice Mongo DB, mongoose, Node JS y express. De la misma forma utilice. Contiene un sistema de autenticación con Firebase para que el usuario pueda logearse desde cualquier dispositivo.  ',
+      'Un "to do list", tenemos 3 columnas que dividen el proceso de nuestras tareas. Las tareas las podemos editar, borrar o bien arrastrar hacia otra columna. Utilicé React JS y la libreria Chakra UI para el front-end .En el back end,utilice Mongo DB, mongoose, Node JS y express. De la misma forma utilice. Contiene un sistema de autenticación con Firebase para que el usuario pueda logearse desde cualquier dispositivo.  ',
     title: "To Do List",
     urlProyect: "https://to-do-list-frontend-ten.vercel.app/",
   }

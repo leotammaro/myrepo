@@ -60,21 +60,16 @@ const AboutMe = forwardRef((_, ref) => {
         <Fade left distance={"50px"} duration={1500}>
           <Stack w={{ base: 300, xl: 500 }}>
             <TextAboutMe
-              description={`Soy Leo, tengo 24 años y me encuentro en busca de un cambio en mi carrera profesional.`}
+              description={`Soy Leo, tengo 24 años y soy Full Stack Developer`}
             />
             <TextAboutMe
               description={
-                "Estoy interesado en introducirme en el ambiente de la informática. Estoy estudiando de forma autodidacta para ser Full Stack Developer."
+                "Para el front-end utilizo React JS. Desarrollo de interfaces de usuarios utilizando la librería Chakra UI. Realizo integraciones con REST API´s. Desarrollo de web´s siguiendo un diseño. "
               }
             />
             <TextAboutMe
               description={
-                "En el front-end estuve aprendiendo el framework de React. Desarrollando interfaces de usuarios utilizando la librería Chakra UI. Estuve haciendo integraciones con REST API´s. Además de desarrollo de web siguiendo un diseño. "
-              }
-            />
-            <TextAboutMe
-              description={
-                "Con respecto al back-end estuve aprendiendo Node JS, Express, bases de datos no relacionales utilizando MONGODB mediante mongoose."
+                "En el back-end utilizo Node JS, Express, bases de datos no relacionales utilizando MONGODB mediante mongoose."
               }
             />
           </Stack>
