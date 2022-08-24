@@ -72,6 +72,11 @@ const AboutMe = forwardRef((_, ref) => {
                 "En el back-end utilizo Node JS, Express, bases de datos no relacionales utilizando MONGODB mediante mongoose."
               }
             />
+            <TextAboutMe
+              description={
+                "Testing utilizando Jest y Cypress"
+              }
+            />
           </Stack>
         </Fade>
       </Stack>
