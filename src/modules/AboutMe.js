@@ -64,7 +64,7 @@ const AboutMe = forwardRef((_, ref) => {
             />
             <TextAboutMe
               description={
-                "Hago front-end con React y lo testeo usando react-testing-library. Desarrollo interfaces de usuarios utilizando Chacra UI, y testeándolas con cypress.io. También tengo experiencia integrando RESTful APIs."
+                "Hago front-end con React y lo testeo usando react-testing-library. Desarrollo interfaces de usuarios utilizando Chakra UI, y testeándolas con cypress.io. También tengo experiencia integrando RESTful APIs."
               }
             />
             <TextAboutMe
