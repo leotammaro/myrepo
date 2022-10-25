@@ -22,7 +22,7 @@ const ContactSection = forwardRef((_, ref) => {
           w={10}
         />
       </Link>
-      <Link>
+      <Link isExternal href="https://github.com/leotammaro">
         <Image
           bg={"#fff"}
           src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
