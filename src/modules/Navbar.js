@@ -3,13 +3,13 @@ import React from "react";
 import LinkNavbar from "./LinkNavbar";
 import portfolioImage from "../images/portfolioImage.jpg";
 
-function Navbar({ scrollToAbout, scrollToProyects, scrollToContact }) {
+function Navbar({ scrollToAbout, scrollToProjects, scrollToContact }) {
   const sections = ["Sobre mi", "Proyectos", "Contactame"];
 
   const scrollToSection = (section) => {
     if (section === "Sobre mi") scrollToAbout();
     else if (section === "Proyectos") {
-      scrollToProyects();
+      scrollToProjects();
     } else {
       scrollToContact();
     }

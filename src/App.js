@@ -12,15 +12,15 @@ import ParticlesBackGround from "./modules/Particles";
 
 function App() {
   const aboutRef = useRef(null);
-  const proyectsRef = useRef(null);
+  const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
   const scrollToAbout = () => {
     aboutRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
-  const scrollToProyects = () => {
-    proyectsRef.current.scrollIntoView({ behavior: "smooth" });
+  const scrollToProjects = () => {
+    projectsRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const scrollToContact = () => {
@@ -44,17 +44,17 @@ function App() {
         >
           <Navbar
             scrollToAbout={scrollToAbout}
-            scrollToProyects={scrollToProyects}
+            scrollToProjects={scrollToProjects}
             scrollToContact={scrollToContact}
           />
           <Home
             scrollToAbout={scrollToAbout}
             scrollToContact={scrollToContact}
-            scrollToProyects={scrollToProyects}
+            scrollToProjects={scrollToProjects}
           />
         </Flex>
         <AboutMe ref={aboutRef} />
-        <ProjectsSection ref={proyectsRef} />
+        <ProjectsSection ref={projectsRef} />
         <ContactSection ref={contactRef} />
         <ParticlesBackGround />
       </Flex>
